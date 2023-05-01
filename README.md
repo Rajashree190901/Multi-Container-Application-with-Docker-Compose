@@ -1,1 +1,0 @@
-# checking-vaccination-status-of-students---application-using-docker-compose
