@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Vaccination Status of the student is</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+      
+      /* Header styles */
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("https://example.com/vaccination.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #1f1b1b;
+        text-align: center;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      }
+      
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+      }
+      
+      p {
+        font-size: 2rem;
+      }
+      
+      /* Error message styles */
+      .error {
+        color: #ff4d4d;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+      
+      /* Vaccination status message styles */
+      .status {
+        color: #33cc33;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+         
+        {% if error %}
+          <p class="error">{{ error }}</p>
+        {% else %}
+          <p class="status">VACCINATION STATUS OF THE STUDENT IS: {{ vaccination_status }}</p>
+        {% endif %}
+      </div>
+    </header>
+  </body>
+</html>
