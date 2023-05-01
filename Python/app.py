@@ -10,14 +10,14 @@ def index():
 @app.route('/vaccination-status', methods=['POST'])
 def get_vaccination_status():
     data = request.form.to_dict()
-    reg_no = data['reg_no']
+    reg_no = data['registration_no']
 
     db = mysql.connector.connect(
         host='127.0.0.1',
         port="3307",
         user="root",
         password="password",
-        database="student_vaccination_db"
+        database="student_db"
     )
      
          
